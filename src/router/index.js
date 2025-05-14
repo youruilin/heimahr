@@ -78,6 +78,7 @@ export const asyncRoutes = [
   socialRouter]
 const createRouter = () => new Router({
   mode: 'history', // require service support
+  base: process.env.VUE_APP_BASE_PATH || '/', // 与环境变量同步
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRoutes // 默认引入静态路由
 })
