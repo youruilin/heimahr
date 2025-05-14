@@ -24,7 +24,8 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
-  publicPath: '/',
+  // publicPath: '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/heimahr/' : '/', // 替换为你的子路径
   outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
